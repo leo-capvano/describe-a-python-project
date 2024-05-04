@@ -2,6 +2,6 @@
 Describe each file of a python project by asking a Generative AI model to generate a natural language explanation of each file
 
 # How
-> pip install -r requirements.txt
+> pip install -r requirements.txt  
 > streamlit run gui.py
 
