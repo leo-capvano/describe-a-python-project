@@ -1,5 +1,5 @@
 import os
-from typing import List
+from typing import List, Dict
 
 from dotenv import load_dotenv
 from langchain.chains.llm import LLMChain
@@ -45,7 +45,7 @@ def generate_description(filename: str) -> List[str]:
         print(f"Error while generating description for file {filename}: {e}")
 
 
-def do_describe_folder(root_folder):
+def do_describe_folder(root_folder) -> dict:
     descriptions_set = dict()
     for root_folder, dirs, files in os.walk(root_folder, topdown=True):
         dirs[:] = [d for d in dirs if d not in EXCLUDED_FOLDER_NAMES]
